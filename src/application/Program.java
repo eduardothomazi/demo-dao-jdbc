@@ -40,5 +40,14 @@ public class Program {
         sellerDao.update(seller);
         System.out.println("Update completed!");
 
+        System.out.println("\n===Test #6 deleteById === id = 10");
+        sellerDao.deleteById(10);
+        for(Seller obj : sellerList) {
+            System.out.println(obj);
+            if (sellerDao.findById(10) == null){
+                System.out.println("Success");
+            }
+        }
+
     }
 }
